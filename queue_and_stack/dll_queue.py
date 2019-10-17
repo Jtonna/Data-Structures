@@ -24,9 +24,15 @@ class Queue:
             self.storage.add_to_tail(value)
 
     def dequeue(self):
-        #  If the size is zero do something
+        #  If the size is zero, we just return, else
         if self.size == 0:
-            pass
+            return
+        else:
+            self.size -= 1
+            #  We need to store the value elsewhere to prevent it from being modified by +1 so we can return it later
+            head_true_value = self.storage.head.value
+            self.storage.remove_from_head()
+            return head_true_value
 
     def len(self):
-        pass
+        return self.size
