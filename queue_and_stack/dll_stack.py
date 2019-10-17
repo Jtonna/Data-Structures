@@ -2,6 +2,8 @@ from doubly_linked_list import DoublyLinkedList
 import sys
 sys.path.append('../doubly_linked_list')
 
+#  A stack is first in -> last out.
+
 class Stack:
     def __init__(self):
         self.size = 0
